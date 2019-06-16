@@ -12,7 +12,7 @@ y = 3  # increase rate
 s = 2  # waiting for refresh time
 
 
-c=''
+c = ''
 # Set the above c
 
 
@@ -72,17 +72,18 @@ try:
             sys.exit()
 
         if tt > 50:
-        	# s = tt - 50
+                # s = tt - 50
             s = 40
         elif 15 < tt <= 50:
-        	s = 2
+            s = 2
         elif tt <= 15:
             s = 1
         if x <= my_price and tt <= 2:
             print('Start to increase the price: the markup amount is' + str(x + y))
             buy(x + y)
         if my_price < x <= my_price + y and tt <= 2:
-            print('Start to increase the price: the markup amount is' + str(my_price + y))
+            print('Start to increase the price: the markup amount is' +
+                  str(my_price + y))
             buy(my_price + y)
         if x <= my_price and tt < 8 and s != 0.1:
             s = 0.1
